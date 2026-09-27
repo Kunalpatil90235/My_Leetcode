@@ -48,10 +48,11 @@ public:
     }
 
     vector<int> searchRange(vector<int>& nums, int target) {
+return {firstPosition(nums, target),lastPosition(nums, target)};
 
-        int first = firstPosition(nums, target);
-        int last = lastPosition(nums, target);
+        // int first = firstPosition(nums, target);
+        // int last = lastPosition(nums, target);
 
-        return {first, last};
+        // return {first, last};
     }
 };
