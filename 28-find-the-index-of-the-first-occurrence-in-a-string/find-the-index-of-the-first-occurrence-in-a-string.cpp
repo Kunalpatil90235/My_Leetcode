@@ -1,3 +1,4 @@
+
 class Solution {
 public:
     int strStr(string haystack, string needle) {
@@ -5,7 +6,13 @@ public:
         int m = needle.size();
 
         for (int i = 0; i <= n - m; i++) {
-            if (haystack.substr(i, m) == needle) {
+            int j = 0;
+
+            while (j < m && haystack[i + j] == needle[j]) {
+                j++;
+            }
+
+            if (j == m) {
                 return i;
             }
         }
